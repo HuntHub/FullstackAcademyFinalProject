@@ -105,8 +105,54 @@
     
     -App server
         
-        The main location where the application itself resides.
+        The main location where the application itself resides within our ecosystem.
         The instance is programmed to initialize and then, through a series of automated user inputs, install our app along with necessary dependencies.
+        
+    -Bastion host
+        
+        The bastion host is dedicated to thwart incoming attacks.
+        
+    -Monitoring server
+    
+        The monitoring server is dedicated to providing in-depth monitoring information to external resources and endpoints.
+        
+        
+--database
+    The database file stores the configuration information for our database.
+    *File under development to work in conjunction with the app's inherent function to create a table within DynamoDB*
+    
+    
+--key
+    The key file generates and allocates key pairs for our instances and downloads the private key to the directory that is running Terraform.
+    This allows for easy SSH ability when used in conjunction with the IP addresses declared in the output.
+    
+    
+--main
+    This file creates our VPC
+    
+    
+--network
+    This file addresses all things networking related including internet gateways, route tables, subnets, elastic IPs, and network interface cards.
+
+
+--notification
+    This file contains the configuration information for SNS to notify customers.
+    
+    
+--output
+    This file gathers various essential pieces of information and shows them to the user upon a successful terraform apply. Can also be called with terraform show.
+    
+    
+--policies
+    This file creates various policies that allow access to and from resources.
+
+
+--providers
+    This file provides essential configuration information for Terraform
+    
+    
+--variables
+    This file contains variables that can be called from any Terraform file.
         
     
 ----end terraform notes----
