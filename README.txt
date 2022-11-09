@@ -1,5 +1,9 @@
 ----------SCRUM EATS READ ME----------
 
+
+****Please note that this app is undergoing constant change, info many not always be 100% accurate. Contact Scrum Eats for help****
+
+
 --Please use a search function quickly locate your desired notes section.
 
 
@@ -64,7 +68,8 @@
     Then make sure you are using the correct function associated with that address.
     In this case we are making a 'POST' request as stated in the methods=['POST'] portion of the line.
 
-    As long as your syntax is correct and you are making the correct type of request to the correct address, your item will post and you should see a message saying that your request was successful.
+    As long as your syntax is correct and you are making the correct type of request to the correct address, your item will post
+    and you should see a message saying that your request was successful.
 
     If you do not see that message, double check your syntax, request type, and address.
 
@@ -72,3 +77,36 @@
 
 
 ----end app.py notes----
+
+
+-----terraform notes-----
+
+-The Terraform files contained in this repository must be copied in their entirety in order for them to function properly.
+ The files will form an entire environment from scratch in your AWS account.
+ 
+ REMEMBER YOU MUST AUTHENTICATE YOUR ACCESS BY ENSURING THE PROPER CREDENTIALS ARE IN YOUR /aws/credentials FILE
+ 
+    File list:
+        compute
+        database
+        key
+        main
+        network
+        notification
+        output
+        policies
+        providers
+        variables
+        
+     
+     
+--compute
+    The compute file stores the configuration information for our EC2 instances including our app server, bastion host, and monitoring instance.
+    
+    -App server
+        
+        The main location where the application itself resides.
+        The instance is programmed to initialize and then, through a series of automated user inputs, install our app along with necessary dependencies.
+        
+    
+----end terraform notes----
